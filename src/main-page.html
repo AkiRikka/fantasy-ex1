@@ -1,9 +1,129 @@
 <!DOCTYPE html>
-aaaaaaaa
-<html>
-    <ody>
-        请修改我！！！！！
-    </ody>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浙江大学Fantasy动漫社</title>
+    <style>
+        .background_photo {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 100vh;
+            z-index: -1;
+        }
+        .background_photo > .bp {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+        .navigate 
+        {
+            color: blueviolet;
+            background-color:darkgrey;
+            position: fixed;
+            top: -20px;
+            left: 0px;
+            right: 0px;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .club_name
+        {
+            color: blueviolet;
+            position: fixed;
+            top: -5px;
+            right: 60px;
+            text-align: right;
+            z-index: 2;
+        }
+        .club_sign
+        {
+            width: 50px;
+            position: fixed;
+            top: 6px;
+            right: 5px;
+            text-align: right;
+            z-index: 1;
+        }
+        .photo_showing
+        {
+        text-align: center;
+        margin-top: 50px;
+        }
+        .photo_showing
+        {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .pho {
+            display: none;
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="background_photo">
+        <img id="miku" src="..\assets\mikupunch.gif" alt="" class="bp">
+    </div>
+    
+    <div class="navigate">
+        <h3 class="navigate">
+            <hr>
+            导航栏
+            <a href="#">网页游戏</a>
+            <a href="#">纳新入口</a>
+            <a href="#">作品展示</a>
+            <a href="#">社团简介</a>
+            <a href="#">社团论坛</a>
+            <hr>
+        </h3>
+    </div>
+        
+    <div class="club_name">
+        <h2>浙江大学Fantasy动漫社</h2>
+    </div>
 
-冲突冲突？
+    <div class="club_sign">
+        <img src="..\assets\logo_from_weibo.jpg" alt="" class="club_sign">
+    </div>
+        
+    <div class="photo_showing">
+        <img src="..\assets\2023081826.jpg" alt="" class="pho">
+        <img src="..\assets\2023081827.jpg" alt="" class="pho">
+        <img src="..\assets\2023081829.jpg" alt="" class="pho">
+        <img src="..\assets\2023081832.jpg" alt="" class="pho">
+        <img src="..\assets\2023081846.jpg" alt="" class="pho">
+        <img src="..\assets\2023081852.jpg" alt="" class="pho">
+        <button onclick="change()">点击这里开始显示或切换图片</button>
+        <script>
+            let currentImageIndex = 0;
+            const images = document.querySelectorAll('.pho');
+            let slideshowInterval;
+
+            function change() {
+                clearInterval(slideshowInterval);
+                let miku = document.getElementById('miku');
+                miku.style.display = "none";
+                images[currentImageIndex].style.display = 'none';
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                images[currentImageIndex].style.display = 'block';
+                startSlideshow();
+            }
+
+            function startSlideshow() {
+                slideshowInterval = setInterval(change, 2000); // 每隔2秒切换一次图片
+            }
+        </script>
+    </div>
+</body>
+</html>
