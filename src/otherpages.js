@@ -7,9 +7,11 @@ const sliderdata=[
     {url: '/assets/6.jpg'},
 ]
 let i=0
+let e=0
 const img=document.querySelector('#slider img')
 const left=document.querySelector('#slider .left-arrow')
-const right=document.querySelector('#slider .right-arrow')
+const right=document.querySelector('#slider .right-arrow') 
+const random=parseInt(Math.random()*sliderdata.length)
 left.addEventListener('click',function(){
     i--
     if(i<0){
@@ -22,15 +24,30 @@ right.addEventListener('click',function(){
     if(i>5){i=0}
     img.src=sliderdata[i].url
 })
-
+function playe(){
+    i=parseInt(Math.random()*sliderdata.length)
+    //console.log(i)
+    if(i==e){
+        i++
+        if(i>5){
+            i=0
+        }
+    }
+    img.src=sliderdata[i].url
+    e=i
+}
 // function getrandom(N,M){
 //     return Math.floor(Math.random()*(N-M+1)+N)
 // }
-// const random=parseInt(Math.random()*sliderdata.length)
+
 // //console.log(sliderdata[random])
 
-// if (img) {
-//     img.src = sliderdata[random].url;
-// } else {
-//     console.error("找不到 '.slider img' 元素，请检查 HTML 结构！");
-// }
+let timeId=setInterval(playe,1500)
+const slider=document.querySelector('#slider')
+slider.addEventListener('mouseenter', function(){
+    clearInterval(timeId)
+})
+slider.addEventListener('mouseleave', function(){
+    clearInterval(timeId)
+    timeId=setInterval(playe,1500)
+})
