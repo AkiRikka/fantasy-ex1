@@ -1,9 +1,480 @@
 <!DOCTYPE html>
-aaaaaaaa
-<html>
-    <ody>
-        请修改我！！！！！
-    </ody>
-</html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Fancy-Fan</title>
+    <link rel="stylesheet" href="./mainstyle.css"></link>
+    <!--
+    <style>
+        body {
+            background-color: #111014;
+            color: #ffffff;
+            height: 100vh;
+            -ms-overflow-style: none;
+            overflow-x: hidden;
+        }
+        
+        .head_bar {
+            background-color: #000000;
+            height: 9vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
 
-冲突冲突？
+        }
+        
+
+        .menus_items {
+
+            width: fit-content;
+            text-align: center;
+            left: 0;
+            right: 0;
+            top: 0;
+            display: flex;
+            flex-direction: row;
+            -webkit-box-pack: center;
+            justify-content: center;
+        }
+
+        .menus_item {
+            padding: 0.4rem;
+            display: flex;
+            -webkit-box-orient: vertical;
+            flex-direction: column;
+            -webkit-box-align: center;
+            align-items: center;
+            margin: auto;
+            position: relative;
+            border-radius: 30px;
+        }
+
+        .menus_item_child {
+            position: absolute;
+            opacity: 0;
+            width: max-content;
+            transition: .2s;
+            box-sizing: content-box;
+            transform: translateY(-10px) scale(0);
+            line-height: 35px;
+            border-radius: 50px;
+            right: auto;
+            left: auto;
+            padding: 6px 4px;
+            transform-origin: top;
+            pointer-events: none;
+            margin-top: 8px;
+        }
+
+        .site-page {
+            text-shadow: none;
+            letter-spacing: .3rem;
+            font-weight: 700;
+            padding: 0 .8em 0 1em;
+            height: 35px;
+            line-height: 35px;
+            font-size: .78em;
+            cursor: pointer;
+            overflow-wrap: break-word;
+            background-color: transparent;
+            box-sizing: border-box;
+            scrollbar-width: thin;
+            color: #ffffff;
+            text-decoration: none;
+        }
+        #title{
+            letter-spacing: 0;
+        }
+
+        /*
+        带滚动条的主页面
+         */
+        #main-web-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 10vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            align-items: center;
+            justify-content: center;
+            display: flow;
+        }
+
+        #home-top {
+            width: 100%;
+            position: relative;
+            top: 3vh;
+            height: auto;
+            align-content: center;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        #random-poster {
+            width: 100%;
+
+        }
+
+        #big-card {
+            width: 90%;
+            flex-direction: row;
+            display: flex;
+        }
+
+        #banner-group {
+            width: 53%
+        }
+
+        #poster-area {
+            width: 97%;
+            height: 48vh;
+            overflow: hidden;
+            border-radius: 2vh;
+            position: relative;
+        }
+
+        #turn-group {
+            width: 47%;
+        }
+
+        #have-to-read {
+            height: 35vh;
+            width: 97%;
+            overflow: hidden;
+            border-radius: 2vh;
+            position: relative;
+            cursor: pointer;
+        }
+
+        #have-to-read-page {
+            width: 100%;
+        }
+
+        #categoryGroup {
+            display: flex;
+            flex-direction: row;
+            width: 97%;
+            position: relative;
+            height: 11vh;
+            top: 1vh;
+        }
+        .categoryItem {
+            /*overflow: hidden;
+            height: 20vh;
+            border-radius: 12px;*/
+            padding: 0.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .categoryButton-blue {
+            background-image: url("/assets/15-110-200.png");
+            background-size: 200%;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .categoryButton-red {
+            background-image: url("/assets/226-45-22.png");
+            background-size: 200%;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+
+        }
+
+        .categoryButton-green {
+            background-image: url("/assets/9-158-119.png");
+            background-size: 200%;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .categoryButtonText {
+            padding-left: 21px;
+            align-items: center;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #have-to-read-text{
+            position: absolute;
+            right: 5vh;
+            bottom: 2vh;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .poster-button{
+            position: absolute;
+            background-size: 200%;
+            display: block;
+            align-items: center;
+            width: 5vh;
+            height: 5vh;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+        #poster-next-button{
+            right: 5vh;
+            bottom: 2vh;
+        }
+        #poster-view-button{
+            right: 5vh;
+            top: 2vh;
+        }
+        #poster-prev-button{
+            right: 12vh;
+            bottom: 2vh;
+        }
+
+
+    </style>
+    -->
+    <script language="JavaScript">
+
+
+
+        /*
+        可供切换的海报图片
+         */
+        let poster_list = [
+            "/assets/0.jpg",
+            "/assets/1.jpg",
+            "/assets/2.jpg",
+            "/assets/3.jpg",
+            "/assets/H2O_hako.png"
+            ];
+
+        let poster_index = poster_list.length - 1;
+
+        function setElementPosition(element, top, left) {
+            element.style.position = "absolute";
+            element.style.top = top + "px";
+            element.style.left = left + "px";
+        }
+
+        /*
+        function setMenuBarPosition() {
+            let window_width = window.innerWidth;
+            let window_height = window.innerHeight;
+            setElementPosition(document.getElementById("title"), window_height * 0.03, window_width * 0.05);
+            setElementPosition(document.getElementById("game"), window_height * 0.03, window_width * 0.5 - 100);
+            setElementPosition(document.getElementById("welcomeNew"), window_height * 0.03, window_width * 0.5 - 40);
+            setElementPosition(document.getElementById("showArt"), window_height * 0.03, window_width * 0.5);
+            setElementPosition(document.getElementById("others"), window_height * 0.03, window_width * 0.5 + 70);
+        }
+
+         */
+        function setMenuBarPosition() {
+            let window_width = window.innerWidth;
+            let window_height = window.innerHeight;
+            setElementPosition(document.getElementById("title"), window_height * 0.03, window_width * 0.05);
+            setElementPosition(document.getElementById("menu_bar_items"), window_width * 0.005, window_width * 0.5 - 160);
+        }
+
+        function nextButtonDown(){
+        }
+        function nextButtonUp(){
+            nextPoster();
+        }
+        function prevButtonDown(){
+        }
+        function prevButtonUp(){
+            prevPoster();
+        }
+        function viewButtonDown(){
+        }
+        function viewButtonUp(){
+            viewPoster();
+        }
+
+        /**
+         * 将海报全屏显示
+         */
+        function viewPoster(){
+            turnToWeb(poster_list[poster_index]);
+        }
+        function nextPoster(){
+            /*
+            let element = document.getElementById("random-poster");
+            poster_index = (poster_index + 1) % poster_list.length;
+            element.src = poster_list[poster_index];
+
+             */
+            //实现切换时渐变效果
+            let element = document.getElementById("random-poster");
+            poster_index = (poster_index + 1) % poster_list.length;
+
+            element.style.opacity = 0;
+            element.style.transition = "opacity 0.5s";
+            setTimeout(function () {
+                element.style.opacity = 1;
+                element.src = poster_list[poster_index];
+                setTimeout(function () {
+                    element.style.transition = "none";
+
+                }, 500);
+            }, 500);
+
+        }
+        function prevPoster(){
+            /*let element = document.getElementById("random-poster");
+            poster_index = (poster_index - 1 + poster_list.length) % poster_list.length;
+            element.src = poster_list[poster_index];*/
+            let element = document.getElementById("random-poster");
+            poster_index = (poster_index - 1 + poster_list.length) % poster_list.length;
+
+            element.style.opacity = 0;
+            element.style.transition = "opacity 0.5s";
+            setTimeout(function () {
+                element.style.opacity = 1;
+                element.src = poster_list[poster_index];
+                setTimeout(function () {
+                    element.style.transition = "none";
+
+                }, 500);
+            }, 500);
+
+        }
+
+        function turnToWeb(url){
+            if (url === "" || url === undefined || url === null || url === "null" || url === "undefined" || url === " " || url === "javascript:void(0)")return;
+            window.open(url);
+        }
+
+    </script>
+</head>
+<body>
+<div>
+    <div class="head_bar">
+        <a id="title" class="site-page" href="javascript:void(0);">
+            <div>Fantasy动漫社</div>
+        </a>
+        <div id="menu_bar_items" class="menus_items">
+
+            <div id="game" class="menus_item">
+                <a class="site-page" href="javascript:void(0);">
+                    <span> 小游戏</span>
+                </a>
+                <div class="menus_item_child">
+                    <a class="site-page" href="javascript:void(0);" data-pjax-state="">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="welcomeNew" class="menus_item">
+                <a class="site-page" href="javascript:void(0);">
+                    <span> 迎新</span>
+                </a>
+                <div class="menus_item_child">
+                    <a class="site-page" href="javascript:void(0);" data-pjax-state="">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="showArt" class="menus_item">
+                <a class="site-page" href="javascript:void(0);">
+                    <span> 作品展示</span>
+                </a>
+                <div class="menus_item_child">
+                    <a class="site-page" href="javascript:void(0);" data-pjax-state="">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+
+            <div id="others" class="menus_item">
+                <a class="site-page" href="javascript:void(0);">
+                    <span> 其他</span>
+                </a>
+                <div class="menus_item_child">
+                    <a class="site-page" href="javascript:void(0);" data-pjax-state="">
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="main-web-container">
+        <div id="home-top">
+            <div id="big-card">
+                <div id="banner-group">
+                    <div id="poster-area">
+                        <img id="random-poster" src="/assets/H2O_hako.png" draggable="false" alt="随机图片">
+                        <img id="poster-next-button" class="poster-button" src="/assets/next_normal.png" alt="next" draggable="false" onmousedown="nextButtonDown()" onmouseup="nextButtonUp()">
+                        <img id="poster-prev-button" class="poster-button" src="/assets/prev_normal.png" alt="back" draggable="false" onmousedown="prevButtonDown()" onmouseup="prevButtonUp()">
+                        <img id="poster-view-button" class="poster-button" src="/assets/appearance_normal.png" alt="view" draggable="false" onmousedown="viewButtonDown()" onmouseup="viewButtonUp()">
+                    </div>
+
+                </div>
+                <div id="turn-group">
+                    <div id="have-to-read">
+                        <div id="have-to-read-text">入站必读</div>
+                        <img id="have-to-read-page" src="/assets/3.jpg" onmouseup="turnToWeb('javascript:void(0)')" draggable="false" alt="入站必读">
+
+                    </div>
+                    <div id="categoryGroup">
+                        <div class="categoryItem">
+                            <a class="categoryButton-blue" href="javascript:void(0)" draggable="false">
+                                <span class="categoryButtonText">分类</span>
+                            </a>
+                        </div>
+                        <div class="categoryItem">
+                            <a class="categoryButton-red" href="javascript:void(0)" draggable="false">
+                                <span class="categoryButtonText">探索</span>
+                            </a>
+                        </div>
+                        <div class="categoryItem">
+                            <a class="categoryButton-green" href="javascript:void(0)" draggable="false">
+                                <span class="categoryButtonText">讨论区</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="main-context">
+
+        </div>
+    </div>
+</div>
+
+<div>
+
+</div>
+<script language="JavaScript">
+    setMenuBarPosition();
+    window.addEventListener("resize", setMenuBarPosition);
+    setInterval(nextPoster, 5000);
+</script>
+
+</body>
+</html>
