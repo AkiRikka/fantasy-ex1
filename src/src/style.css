@@ -1,0 +1,144 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "楷体";
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+    margin: 15px;
+    position: relative; 
+    left: 1000px;
+    top:-480px;
+}
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    transition: .6s ease;
+    border-radius: 20px;
+}
+
+ul li a:hover{
+    background-color: #fff;
+    color: #000;
+}
+ul li.active a{
+    background-color: #fff;
+    color: #000;
+}
+.title{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.title h1{
+    color: #fff;
+    font-size: 70px;
+    font-family: Century Gothic;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, rgba(240,203,195, 0.1), rgba(173,159,212, 0.2)) ,url("../../assets/微信图片_20241004224815.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.shell {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    left: -900px;
+    top: 250px;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 10px #fff solid;
+    box-shadow: 20px 30px 20px rgba(0, 0, 0, 0.5);
+}
+
+.images {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: .2s;
+}
+
+.img{
+    width: 100%;
+    background-size: cover;
+}
+.img:nth-child(1){
+    background-image: url("../../assets/微信图片_20241120154839.jpg");
+}
+.img:nth-child(2){
+    background-image: url("../../assets/微信图片_20241120154857.jpg");
+}
+.img:nth-child(3){
+    background-image: url("../../assets/微信图片_20241120154900.jpg");
+}
+.img:nth-child(4){
+    background-image: url("../../assets/微信图片_20241120154903.jpg");
+}
+
+.min-images {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 20px;
+    width: 40%;
+    z-index: 999;
+    right: 10%;
+}
+
+.min{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-size: cover;
+    border: solid rgba(255, 255, 255, 0.5) 5px;
+    background-position: -20px 0;
+}
+.min:nth-child(1){
+    background-image: url("../../assets/微信图片_20241120154839.jpg");
+}
+.min:nth-child(2){
+    background-image: url("../../assets/微信图片_20241120154857.jpg");
+}
+.min:nth-child(3){
+    background-image: url("../../assets/微信图片_20241120154900.jpg");
+}
+.min:nth-child(4){
+    background-image: url("../../assets/微信图片_20241120154903.jpg");
+}
+
+
+.button {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select:none;
+}
+
+.button-left,
+.button-right {
+    font-size: 50px;
+    padding: 0 20px;
+    cursor: pointer;
+    line-height: 500px;
+}
